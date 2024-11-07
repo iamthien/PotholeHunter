@@ -74,6 +74,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Sign up clicked", Toast.LENGTH_SHORT).show();
+                Intent intent2 = new Intent(MainActivity.this, HomeActivity.class);
+                startActivity(intent2);
             }
         });
 

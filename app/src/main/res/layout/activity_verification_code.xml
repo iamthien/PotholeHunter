@@ -33,6 +33,7 @@
             android:layout_gravity="center" />
 
         <TextView
+            android:id="@+id/description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="15dp"
@@ -54,8 +55,8 @@
             android:gravity="center"
             android:layout_marginTop="30dp">
 
-            <!-- Individual Code Box -->
             <EditText
+                android:id="@+id/block1"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/rounded_border"
@@ -68,6 +69,7 @@
                 android:layout_margin="4dp" />
 
             <EditText
+                android:id="@+id/block2"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/rounded_border"
@@ -80,6 +82,7 @@
                 android:layout_margin="4dp" />
 
             <EditText
+                android:id="@+id/block3"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/rounded_border"
@@ -92,6 +95,7 @@
                 android:layout_margin="4dp" />
 
             <EditText
+                android:id="@+id/block4"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/rounded_border"
@@ -104,6 +108,7 @@
                 android:layout_margin="4dp" />
 
             <EditText
+                android:id="@+id/block5"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
                 android:background="@drawable/rounded_border"
@@ -117,7 +122,7 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/btnSignup"
+            android:id="@+id/btnConfirmVerifyCode"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
@@ -150,10 +155,8 @@
 
         </LinearLayout>
 
-
-
-
         <TextView
+            android:id="@+id/tvResendCountdown"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/resend_in_x_time"

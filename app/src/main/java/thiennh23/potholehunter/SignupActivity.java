@@ -22,6 +22,7 @@ public class SignupActivity extends AppCompatActivity {
     private TextView tvLogin;
     private boolean isPasswordVisible = false;
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

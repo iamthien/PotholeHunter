@@ -66,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Forgot Password clicked", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, ForgotPasswordActivity.class));
             }
         });
 

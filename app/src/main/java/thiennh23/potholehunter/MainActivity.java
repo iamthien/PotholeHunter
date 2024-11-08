@@ -55,9 +55,9 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(MainActivity.this, "Logging in...", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(MainActivity.this, HomeActivity.class);
+                    startActivity(intent);
                 }
-                Intent intent = new Intent(MainActivity.this, MapActivity.class);
-                startActivity(intent);
             }
         });
 
@@ -74,8 +74,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(MainActivity.this, "Sign up clicked", Toast.LENGTH_SHORT).show();
-                Intent intent2 = new Intent(MainActivity.this, HomeActivity.class);
-                startActivity(intent2);
+                Intent intent = new Intent(MainActivity.this, SignupActivity.class);
+                startActivity(intent);
             }
         });
 

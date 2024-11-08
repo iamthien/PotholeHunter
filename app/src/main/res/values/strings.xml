@@ -16,4 +16,19 @@
     <string name="home">Home</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="singup">Sign Up</string>
+    <string name="enter_your_username">Enter your username</string>
+    <string name="enter_your_email">Enter your email</string>
+    <string name="enter_your_phone">Enter your phone number</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="forgot_password_description">No worries! Enter your email address below and we will send you a code to reset password.</string>
+    <string name="confirm">Confirm</string>
+    <string name="create_password">Create Password</string>
+    <string name="create_password_description">Please enter and confirm your password.\nYou will need to login after reset</string>
+    <string name="re_enter_your_password">Re-enter Your Password</string>
+    <string name="check_your_email">Check your email</string>
+    <string name="check_your_email_description">We sent a verification code to your mailbox.\nEnter 5-digit code that is mentioned in email</string>
+    <string name="didnot_rev_code">Didn’t Receive Code?</string>
+    <string name="resend_in_x_time">Resend code in 00:59 second</string>
+    <string name="resend">Resend Code</string>
 </resources>

@@ -33,4 +33,18 @@
     <string name="resend">Resend Code</string>
     <string name="setting">Settings</string>
     <string name="back_button_description">Back button</string>
+    <string name="notification_feedback">Notifications &amp; Feedbacks</string>
+    <string name="notification_icon">Notification icon</string>
+    <string name="notifications">Notifications</string>
+    <string name="icon_description">icon_description</string>
+    <string name="default_option">Default Option</string>
+    <string name="arrow_next">arrow next</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="dark_mode_icon">Dark Mode Icon</string>
+    <string name="profile">Profile</string>
+    <string name="regional">Regional</string>
+    <string name="profile_picture">Profile Picture</string>
+    <string name="your_account">Your account</string>
+    <string name="edit_personal_detail">Edit personal detail</string>
+    <string name="go_to_account_details">Go to account details</string>
 </resources>

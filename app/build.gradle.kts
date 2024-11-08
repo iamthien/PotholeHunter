@@ -45,4 +45,6 @@ dependencies {
     implementation("nl.joery.animatedbottombar:library:1.1.0")
     // Shimmer effect
     implementation("com.facebook.shimmer:shimmer:0.5.0")
+    // CircleImageView
+    implementation("de.hdodenhof:circleimageview:3.1.0")
 }

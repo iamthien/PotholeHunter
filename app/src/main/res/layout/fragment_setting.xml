@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_margin="20dp">
+        android:padding="20dp">
 
         <!-- Top Bar with Title and Back Button -->
         <LinearLayout
@@ -18,23 +18,30 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center_vertical"
-            android:layout_marginBottom="15dp">
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="15dp">
 
+            <!-- Title Text -->
             <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
-                android:text="Settings"
+                android:text="@string/setting"
                 android:textSize="26sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold"
+                android:layout_weight="1"/>
 
+            <!-- Back Button -->
             <ImageView
+                android:id="@+id/back_button"
                 android:layout_width="45dp"
                 android:layout_height="45dp"
                 android:src="@drawable/ic_back"
                 android:contentDescription="@string/back_button_description"
-                android:padding="8dp"/>
+                android:padding="8dp"
+                android:layout_marginEnd="20dp"/>
         </LinearLayout>
+
 
         <!-- Account Section -->
         <LinearLayout
@@ -42,266 +49,175 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:background="@drawable/background_frame"
-            android:padding="16dp"
-            android:marginTop="24dp">
+            android:padding="10dp">
 
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:src="@drawable/user"
-                android:contentDescription="Profile Picture"
-                android:layout_marginEnd="16dp"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/profile_image"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/avt"
+                app:civ_border_width="0.5dp"
+                app:civ_border_color="#FF000000"
+                android:layout_marginEnd="16dp"
+                android:contentDescription="@string/profile_picture"/>
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Your account"
-                    android:textSize="18sp"
+                    android:text="@string/your_account"
+                    android:textSize="20sp"
+                    android:layout_marginTop="6dp"
                     android:textStyle="bold"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Edit personal detail"
-                    android:textSize="14sp"
+                    android:text="@string/edit_personal_detail"
+                    android:textSize="15sp"
                     android:textColor="#BA5A5A"/>
             </LinearLayout>
+
+            <!-- Arrow Icon -->
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_next"
+                android:layout_margin="14dp"
+                android:contentDescription="@string/go_to_account_details"/>
         </LinearLayout>
 
-        <!-- Dark Mode Section -->
+
+        <!-- Settings Options Sections -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="16dp">
+            android:orientation="vertical"
+            android:layout_marginTop="24dp">
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/darkmode"
-                android:contentDescription="Change Password"/>
-
-            <TextView
-                android:layout_width="0dp"
+            <!-- Dark Mode Option -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Dark Mode"
-                android:textSize="16sp"
-                android:layout_marginStart="10dp"
-                android:layout_weight="1"/>
+                android:orientation="horizontal"
+                android:background="@drawable/background_frame"
+                android:layout_marginBottom="15dp"
+                android:padding="16dp">
 
-            <Switch
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/darkmode"
+                    android:contentDescription="@string/dark_mode_icon"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dark_mode"
+                    android:textSize="20sp"
+                    android:layout_marginStart="10dp"
+                    android:layout_weight="1"/>
+
+                <Switch
+                    android:id="@+id/dark_mode_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:trackTint="#BA5A5A"
+                    android:thumbTint="#BA5A5A"/>
+            </LinearLayout>
+
+            <!-- Profile Section Label -->
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="false"
-                android:trackTint="#BA5A5A"
-                android:thumbTint="#BA5A5A"/>
-        </LinearLayout>
+                android:text="@string/profile"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginVertical="8dp"/>
 
-        <!-- Profile Section -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Profile"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="8dp"/>
+            <!-- Edit Profile and Change Password Rows -->
 
-        <!-- Edit Profile Row -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="16dp"
-            android:gravity="start">
+            <!-- Notifications & Feedback Section Label -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/user"
-                android:contentDescription="Edit Profile"/>
+                <include
+                    layout="@layout/setting_option_item"
+                    android:id="@+id/edit_profile_option" />
+
+                <include
+                    layout="@layout/setting_option_item"
+                    android:id="@+id/change_password_option" />
+            </LinearLayout>
 
             <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Edit Profile"
-                android:layout_weight="1"
-                android:layout_marginStart="16dp"
-                android:textSize="16sp"/>
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_next"
-                android:contentDescription="Navigate"/>
-        </LinearLayout>
-
-        <!-- Change Password Row -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="16dp"
-            android:gravity="start">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_changepwd"
-                android:contentDescription="Change Password"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Change Password"
-                android:layout_weight="1"
-                android:layout_marginStart="16dp"
-                android:textSize="16sp"/>
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_next"
-                android:contentDescription="Navigate"/>
-        </LinearLayout>
-
-        <!-- Notifications & Feedback Section -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Notifications Feedback"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="8dp"/>
-
-        <!-- Notifications Row -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="start"
-            android:padding="16dp">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/notification"
-                android:contentDescription="Feedback"/>
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:text="Notifications"
-                android:layout_weight="1"
-                android:textSize="16sp"/>
-
-            <Switch
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        </LinearLayout>
-
-        <!-- Feedback Row -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="16dp"
-            android:gravity="start">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/feedback"
-                android:contentDescription="Feedback"/>
-
-            <TextView
-                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Feedback"
-                android:layout_weight="1"
-                android:layout_marginStart="16dp"
-                android:textSize="16sp"/>
+                android:text="@string/notification_feedback"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginVertical="8dp"
+                android:layout_marginBottom="15dp"/>
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_next"
-                android:contentDescription="Navigate"/>
-        </LinearLayout>
-
-        <!-- Regional Section -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Regional"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="8dp"/>
-
-        <!-- Language Row -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="16dp"
-            android:gravity="start">
-
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/language"
-                android:contentDescription="Language"/>
-
-            <TextView
-                android:layout_width="0dp"
+            <!-- Notifications Option -->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Language"
-                android:layout_weight="1"
-                android:layout_marginStart="16dp"
-                android:textSize="16sp"/>
+                android:orientation="horizontal"
+                android:background="@drawable/background_frame"
+                android:padding="16dp">
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_next"
-                android:contentDescription="Navigate"/>
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/notification"
+                    android:contentDescription="@string/notification_icon"/>
 
-        <!-- Log Out Row -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="16dp"
-            android:gravity="start">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/notifications"
+                    android:layout_weight="1"
+                    android:textSize="20sp"/>
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/logout"
-                android:contentDescription="Log out"/>
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
 
+            <!-- Feedback Option -->
+            <include
+                layout="@layout/setting_option_item"
+                android:id="@+id/feedbacks_option" />
+
+
+            <!-- Regional Label and Language Option -->
             <TextView
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Log out"
-                android:layout_weight="1"
-                android:layout_marginStart="16dp"
-                android:textSize="16sp"/>
+                android:text="@string/regional"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginVertical="8dp"
+                android:layout_marginBottom="15dp"/>
 
-            <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_next"
-                android:contentDescription="Navigate"/>
+            <include
+                layout="@layout/setting_option_item"
+                android:id="@+id/languages_option" />
+
+            <!-- Logout Option -->
+            <include
+                layout="@layout/setting_option_item"
+                android:id="@+id/logout_option" />
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

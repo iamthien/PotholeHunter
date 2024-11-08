@@ -77,8 +77,8 @@ public class HomeActivity extends AppCompatActivity {
 
         // Initialize Fragments
         homeFrag = new HomeFragment();
-        feedFrag = new FeedFragment();
         mapsFrag = new MapFragment();
+        feedFrag = new FeedFragment();
         userFrag = new UserFragment();
         delayHandler = new Handler();
 
@@ -105,10 +105,10 @@ public class HomeActivity extends AppCompatActivity {
                         fragment = homeFrag;
                         break;
                     case 1:
-                        fragment = feedFrag;
+                        fragment = mapsFrag;
                         break;
                     case 2:
-                        fragment = mapsFrag;
+                        fragment = feedFrag;
                         break;
                     case 3:
                         fragment = userFrag;

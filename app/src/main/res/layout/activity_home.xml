@@ -7,11 +7,15 @@
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
+    <!-- FrameLayout with height set to 0dp to take available space -->
     <FrameLayout
         android:id="@+id/fragment_container"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar" />
 
+    <!-- Animated Bottom Bar -->
     <nl.joery.animatedbottombar.AnimatedBottomBar
         android:id="@+id/bottom_bar"
         android:background="#FFF"

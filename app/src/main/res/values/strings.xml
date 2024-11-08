@@ -31,4 +31,6 @@
     <string name="didnot_rev_code">Didn’t Receive Code?</string>
     <string name="resend_in_x_time">Resend code in 00:59 second</string>
     <string name="resend">Resend Code</string>
+    <string name="setting">Settings</string>
+    <string name="back_button_description">Back button</string>
 </resources>

@@ -13,7 +13,7 @@
         android:icon="@drawable/feed"
         android:title="@string/feed" />
     <item
-        android:id="@+id/tab_user"
-        android:icon="@drawable/user"
-        android:title="@string/user" />
+        android:id="@+id/tab_setting"
+        android:icon="@drawable/setting"
+        android:title="@string/setting" />
 </menu>

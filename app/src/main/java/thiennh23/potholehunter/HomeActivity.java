@@ -1,7 +1,5 @@
 package thiennh23.potholehunter;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -13,22 +11,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import nl.joery.animatedbottombar.AnimatedBottomBar;
-import thiennh23.potholehunter.HomeFragment;
-import thiennh23.potholehunter.FeedFragment;
-import thiennh23.potholehunter.MapFragment;
-import thiennh23.potholehunter  .UserFragment;
 
 
 public class HomeActivity extends AppCompatActivity {
 
     private FragmentManager fm;
     private AnimatedBottomBar navbar;
-    private Fragment homeFrag, mapsFrag, feedFrag, userFrag, fragment;
+    private Fragment homeFrag, mapsFrag, feedFrag, settingFrag, fragment;
 
     //Handler -> utils
     public static Handler delayHandler;
@@ -79,7 +72,7 @@ public class HomeActivity extends AppCompatActivity {
         homeFrag = new HomeFragment();
         mapsFrag = new MapFragment();
         feedFrag = new FeedFragment();
-        userFrag = new UserFragment();
+        settingFrag = new SettingFragment();
         delayHandler = new Handler();
 
 
@@ -111,7 +104,7 @@ public class HomeActivity extends AppCompatActivity {
                         fragment = feedFrag;
                         break;
                     case 3:
-                        fragment = userFrag;
+                        fragment = settingFrag;
                         break;
                 }
 

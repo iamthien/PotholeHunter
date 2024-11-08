@@ -41,5 +41,8 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation("org.osmdroid:osmdroid-android:6.1.14")
+    // Animated bottom navigation bar
     implementation("nl.joery.animatedbottombar:library:1.1.0")
+    // Shimmer effect
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
 }

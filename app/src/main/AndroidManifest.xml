@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
@@ -17,6 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PotholeHunter"
         tools:targetApi="31">
+        <activity
+            android:name=".PotholeImagesDetectionActivity"
+            android:exported="false" />
         <activity
             android:name=".VerificationCodeActivity"
             android:exported="false" />

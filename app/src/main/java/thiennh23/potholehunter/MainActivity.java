@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     private EditText etUsername, etPassword;
-    private Button btnLogin;
+    private Button btnLogin, btnDetectionML;
     private TextView tvForgotPassword, tvSignUp;
     private boolean isPasswordVisible = false;
 
@@ -80,6 +80,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Button to test potholes detection tensorflow ML
+        btnDetectionML.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PotholeImagesDetectionActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     void init() {
@@ -89,6 +98,7 @@ public class MainActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.loginButton);
         tvForgotPassword = findViewById(R.id.forgotPassword);
         tvSignUp = findViewById(R.id.tvSignup);
+        btnDetectionML = findViewById(R.id.btnDetectionML);
     }
 
     @SuppressLint("UseCompatLoadingForDrawables")

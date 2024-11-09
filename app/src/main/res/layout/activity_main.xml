@@ -83,6 +83,15 @@
             android:textColor="#FFFFFF"
             android:backgroundTint="#D2691E"/>
 
+        <Button
+            android:id="@+id/btnDetectionML"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="19dp"
+            android:text="Test potholes detection"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#D2691E"/>
+
 
 
         <LinearLayout
